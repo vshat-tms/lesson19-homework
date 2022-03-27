@@ -1,6 +1,5 @@
 package com.example.lessson17
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
@@ -14,7 +13,6 @@ import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     private var counter = 0
@@ -66,7 +64,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         imageView.setOnClickListener {
-            updateRotation(rotation + resources.getInteger(R.integer.swivel_angle_by_click).toFloat())
+            updateRotation(
+                rotation + resources.getInteger(R.integer.swivel_angle_by_click).toFloat()
+            )
         }
     }
 
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
         rootView.setBackgroundColor(colorText)
         Log.d(
-            TAG, "click on button ${view.text} set color $colorText"
+            "setBG", "click on button ${view.text} set color $colorText"
         )
     }
 
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
         Log.d(
-            TAG, "click on button ${view.text} set image $imageRes"
+            "setImage", "click on button ${view.text} set image $imageRes"
         )
     }
 
@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private lateinit  var appContext: Context
+        private lateinit var appContext: Context
         private val IMAGES_MAP by lazy {
             mapOf(
                 appContext.getString(R.string.cat) to R.drawable.cat,
@@ -122,7 +122,6 @@ class MainActivity : AppCompatActivity() {
         when ((view as Button).text) {
             getString(R.string.device) -> {
                 infoTextView.text = android.os.Build.MANUFACTURER + " " + android.os.Build.MODEL
-
             }
             getString(R.string.time) -> {
                 infoTextView.text =
@@ -134,7 +133,7 @@ class MainActivity : AppCompatActivity() {
             else -> error(getString(R.string.unknown_command))
         }
         Log.d(
-            TAG, "click on button ${view.text}"
+            "info", "click on button ${view.text}"
         )
     }
 }
