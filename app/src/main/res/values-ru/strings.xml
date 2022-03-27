@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Урок 17</string>
+    <string name="info">инфо</string>
+    <string name="counter">счетчик</string>
+    <string name="device">устройство</string>
+    <string name="time">время</string>
+    <string name="toast">уведомление</string>
+    <string name="color">цвет</string>
+    <string name="background">фон</string>
+    <string name="image">изображение</string>
+    <string name="cat">кот</string>
+    <string name="dog">собака</string>
+    <string name="parrot">попугай</string>
+    <string name="unknown_command">неизвестная команда</string>
+    <string name="hello_message">привет</string>
+</resources>

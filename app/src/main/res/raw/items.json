@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Святой источник",
+    "isFizzy": true,
+    "isOpen": true,
+    "remainder": "примерно половина",
+    "when_bought": "вчера",
+    "cost": "20 рублей"
+  },
+  {
+    "name": "Родник",
+    "isFizzy": false,
+    "isOpen": false,
+    "when_bought": "сегодня утром",
+    "cost": "15 рублей"
+  },
+  {
+    "name": "Zewa",
+    "quantity": 10,
+    "remainder": 7,
+    "isGift": true,
+    "when_given": "неделю назад"
+  }
+]

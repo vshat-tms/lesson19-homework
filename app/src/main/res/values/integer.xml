@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_value_for_rnd">1</integer>
+    <integer name="max_value_for_rnd">9</integer>
+    <integer name="start_value_for_counter">0</integer>
+    <integer name="swivel_angle_start">0</integer>
+    <integer name="swivel_angle_by_click">90</integer>
+    <integer name="counter_step">1</integer>
+</resources>

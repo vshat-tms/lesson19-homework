@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products_on_table>
+    <water_bottle
+        name="Святой источник"
+        isFizzy="да"
+        isOpen="да"
+        volume="1.5 литра"
+        remainder="примерно половина"
+        when_bought="вчера"
+        cost="20 рублей">
+    </water_bottle>
+    <water_bottle
+        name="Родник"
+        isFizzy="нет"
+        isOpen="нет"
+        when_bought="сегодня утром"
+        cost="15 рублей">
+    </water_bottle>
+    <wipes
+        name="Zewa"
+        quantity="10"
+        remainder="7"
+        isGift="true"
+        when_given="неделю назад">
+    </wipes>
+</products_on_table>
