@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <table>
+        <bottleOfWater>
+            <type>Газированная</type>
+            <name>Святой источник</name>
+            <capacity>1.5 литра</capacity>
+            <remaind>50 %</remaind>
+            <price>20 Руб</price>
+        </bottleOfWater>
+
+        <bottleOfWater>
+            <type>Негазированная</type>
+            <name>Родник</name>
+            <TimeFromParchase>Сегодня</TimeFromParchase>
+            <remaind>100 %</remaind>
+            <price>15 Руб</price>
+        </bottleOfWater>
+
+        <tissues>
+            <name>Zewa</name>
+            <TimeFromParchase>Неделя</TimeFromParchase>
+            <capacity>10 штук</capacity>
+            <remaind>70 %</remaind>
+            <price>0 Руб</price>
+        </tissues>
+    </table>
+</resources>

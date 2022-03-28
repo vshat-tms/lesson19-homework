@@ -1,34 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">lessson17</string>
-    <string name="info">info</string>
-    <string name="button_device">device</string>
-    <string name="button_time">time</string>
-    <string name="button_toast">toast</string>
+    <string name="app_name">Урок17</string>
+    <string name="info">Информация</string>
+    <string name="button_device">Устройство</string>
+    <string name="button_time">Время</string>
+    <string name="button_toast">Сообщение</string>
 
-    <string name="counter">counter</string>
+    <string name="counter">Счётчик</string>
     <string name="button_plus" translatable="false">+</string>
     <string name="button_minus" translatable="false">-</string>
     <string name="button_zero" translatable="false">0</string>
     <string name="button_random_int" translatable="false">RND</string>
 
-    <string name="color">color</string>
+    <string name="color">Цвет текста</string>
     <string name="button_r" translatable="false">r</string>
     <string name="button_g" translatable="false">g</string>
     <string name="button_b" translatable="false">b</string>
     <string name="button_m" translatable="false">m</string>
 
-    <string name="background">background</string>
+    <string name="background">Задний фон</string>
     <string name="button_1" translatable="false">1</string>
     <string name="button_2" translatable="false">2</string>
     <string name="button_3" translatable="false">3</string>
     <string name="button_4" translatable="false">4</string>
 
-    <string name="image">image</string>
-    <string name="button_cat">cat</string>
-    <string name="button_dog">dog</string>
-    <string name="button_parrot">parrot</string>
+    <string name="image">Изображение</string>
+    <string name="button_cat">Кот</string>
+    <string name="button_dog">Пёс</string>
+    <string name="button_parrot">Попугай</string>
     <string name="button_random_zoo" translatable="false">RND</string>
 
-    <string name="hello">hello</string>
-    <string name="error">Unknown command</string>
+    <string name="hello">Привет</string>
+    <string name="error">Неизвестная команда</string>
 </resources>

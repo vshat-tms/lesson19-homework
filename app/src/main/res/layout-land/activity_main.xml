@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/pixels_24"
+            android:paddingTop="@dimen/pixels_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/counter"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_20" />
+
+            <Button
+                android:id="@+id/btn_counter_plus"
+                android:layout_width="@dimen/pixels_50"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pixels_16"
+                android:text="@string/button_plus"
+                android:textSize="@dimen/text_20" />
+
+            <Button
+                android:id="@+id/btn_counter_minus"
+
+                android:layout_width="@dimen/pixels_50"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pixels_16"
+                android:text="@string/button_minus"
+                android:textSize="@dimen/text_20" />
+
+            <Button
+                android:id="@+id/btn_counter_0"
+
+                android:layout_width="@dimen/pixels_50"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pixels_16"
+                android:text="@string/button_zero"
+                android:textSize="@dimen/text_20" />
+
+            <Button
+                android:id="@+id/btn_counter_rnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pixels_16"
+                android:text="@string/button_random_int"
+                android:textSize="@dimen/text_20" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/pixels_24"
+                android:paddingTop="@dimen/pixels_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/info"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_16"
+                    android:onClick="info"
+                    android:text="@string/button_device"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_16"
+                    android:onClick="info"
+                    android:text="@string/button_time"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_16"
+                    android:onClick="info"
+                    android:text="@string/button_toast"
+                    android:textSize="@dimen/text_20" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/pixels_24"
+                android:paddingTop="@dimen/pixels_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/color"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:id="@+id/btn_color_r"
+
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_36"
+                    android:text="@string/button_r"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:id="@+id/btn_color_g"
+
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:text="@string/button_g"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:id="@+id/btn_color_b"
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:text="@string/button_b"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:id="@+id/btn_color_m"
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:text="@string/button_m"
+                    android:textSize="@dimen/text_20" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/pixels_24"
+                android:paddingTop="@dimen/pixels_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/background"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_36"
+                    android:onClick="setBg"
+                    android:text="@string/button_1"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:onClick="setBg"
+                    android:text="@string/button_2"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:onClick="setBg"
+                    android:text="@string/button_3"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="@dimen/pixels_50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:onClick="setBg"
+                    android:text="@string/button_4"
+                    android:textSize="@dimen/text_20" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/pixels_24"
+                android:paddingTop="@dimen/pixels_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/image"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_36"
+                    android:onClick="setImage"
+                    android:text="@string/button_cat"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:onClick="setImage"
+                    android:text="@string/button_dog"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:onClick="setImage"
+                    android:text="@string/button_parrot"
+                    android:textSize="@dimen/text_20" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pixels_24"
+                    android:onClick="setImage"
+                    android:text="@string/button_random_zoo"
+                    android:textSize="@dimen/text_20" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/pixels_200"
+            android:layout_height="@dimen/pixels_200"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/pixels_24"
+            android:src="@drawable/cat" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/pixels_24"
+            android:gravity="center"
+            android:text="@string/info"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_28" />
+
+    </LinearLayout>
+</ScrollView>

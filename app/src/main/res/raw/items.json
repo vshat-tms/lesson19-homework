@@ -1,0 +1,31 @@
+{
+  "table": [
+    {
+      "FirstBottleOfWater": {
+        "type": "Газированная",
+        "name": "Святой источник",
+        "capacity": "1.5 литра",
+        "remaind": "50 %",
+        "price": "20 Руб"
+      }
+    },
+    {
+      "SecondBottleOfWater": {
+        "type": "Негазированная",
+        "name": "Родинк",
+        "TimeFromPurchase": "Сегодня",
+        "remaind": "100 %",
+        "price": "15 Руб"
+      }
+    },
+    {
+      "tissues": {
+        "name": "Zewa",
+        "TimeFromPurchase": "Неделя",
+        "capacity": "10 штук",
+        "remaind": "70 %",
+        "price": "0 Руб"
+      }
+    }
+  ]
+}

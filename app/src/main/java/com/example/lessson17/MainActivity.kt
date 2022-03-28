@@ -1,7 +1,9 @@
 package com.example.lessson17
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -28,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val MIN_VALUE = resources.getInteger(R.integer.minValues)
+        val MAX_VALUE = resources.getInteger(R.integer.maxValues)
+
+        draw = applicationContext
+
         rootView = findViewById(R.id.root)
         infoTextView = findViewById(R.id.tv_info)
         imageView = findViewById(R.id.imageView)
@@ -41,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
-            updateCounter((-100..100).random())
+            updateCounter((MIN_VALUE..MAX_VALUE).random())
 
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
@@ -73,13 +80,14 @@ class MainActivity : AppCompatActivity() {
 
     fun setBg(view: View) {
         val colorText = when ((view as Button).text) {
-            "1" -> "#cccccc"
-            "2" -> "#dddddd"
-            "3" -> "#eeeeee"
-            else -> "#ffffff"
+            "1" -> getColor(R.color.white_204)
+            "2" -> getColor(R.color.white_221)
+            "3" -> getColor(R.color.white_238)
+            else -> getColor(R.color.white)
         }
-        val color = Color.parseColor(colorText)
-        rootView.setBackgroundColor(color)
+        rootView.setBackgroundColor(colorText)
+
+        Log.d(TAG, "Button click ${view.text}")
     }
 
     fun setImage(view: View) {
@@ -91,6 +99,8 @@ class MainActivity : AppCompatActivity() {
         updateRotation(0f)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
+
+        Log.d(TAG, "Button click ${view.text}")
     }
 
     private fun updateRotation(angle: Float) {
@@ -99,26 +109,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val IMAGES_MAP = mapOf(
-            "cat" to R.drawable.cat,
-            "dog" to R.drawable.dog,
-            "parrot" to R.drawable.parrot,
-        )
+
+        private const val TAG = "PrivateActivity"
+
+        private lateinit var draw: Context
+        private val IMAGES_MAP by lazy {
+            mapOf(
+                draw.getString(R.string.button_cat) to R.drawable.cat,
+                draw.getString(R.string.button_dog) to R.drawable.dog,
+                draw.getString(R.string.button_parrot) to R.drawable.parrot
+            )
+        }
     }
 
     fun info(view: View) {
         when ((view as Button).text) {
-            "device" -> {
-                infoTextView.text = android.os.Build.MANUFACTURER + " " + android.os.Build.MODEL
-
+            resources.getString(R.string.button_device) -> {
+                infoTextView.text = "${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}"
             }
-            "time" -> {
+            resources.getString(R.string.button_time) -> {
                 infoTextView.text = SimpleDateFormat("HH:mm", Locale.US).format(Date())
             }
-            "toast" -> {
-                Toast.makeText(this, "hello", Toast.LENGTH_LONG).show()
+            resources.getString(R.string.button_toast) -> {
+                Toast.makeText(this, resources.getString(R.string.hello), Toast.LENGTH_LONG).show()
             }
-            else -> error("unknown command")
+            else -> error(resources.getString(R.string.error))
         }
+        Log.d(TAG, "Button click ${view.text}")
     }
 }
