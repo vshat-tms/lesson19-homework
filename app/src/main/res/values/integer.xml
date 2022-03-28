@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_rnd">1</integer>
+    <integer name="max_rnd">9</integer>
+    <integer name="counter_step">1</integer>
+    <integer name="counter_zero">0</integer>
+</resources>

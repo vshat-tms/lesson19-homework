@@ -1,7 +1,10 @@
 package com.example.lessson17
 
+import android.content.Context
+import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -23,29 +26,29 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rootView: View
     private lateinit var imageView: ImageView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        appContext = applicationContext
         rootView = findViewById(R.id.root)
         infoTextView = findViewById(R.id.tv_info)
         imageView = findViewById(R.id.imageView)
-
+        val minNumRandom = resources.getInteger(R.integer.min_rnd)
+        val maxNumRandom = resources.getInteger(R.integer.max_rnd)
+        val countStep = resources.getInteger(R.integer.counter_step)
 
         findViewById<View>(R.id.btn_counter_minus).setOnClickListener {
-            updateCounter(counter - 1)
+            updateCounter(counter - countStep)
         }
         findViewById<View>(R.id.btn_counter_plus).setOnClickListener {
-            updateCounter(counter + 1)
-
+            updateCounter(counter + countStep)
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
-            updateCounter((-100..100).random())
-
+            updateCounter((minNumRandom..maxNumRandom).random())
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
-            updateCounter(0)
+            updateCounter(resources.getInteger(R.integer.counter_zero))
         }
 
         findViewById<View>(R.id.btn_color_r).setOnClickListener {
@@ -73,13 +76,14 @@ class MainActivity : AppCompatActivity() {
 
     fun setBg(view: View) {
         val colorText = when ((view as Button).text) {
-            "1" -> "#cccccc"
-            "2" -> "#dddddd"
-            "3" -> "#eeeeee"
-            else -> "#ffffff"
+            resources.getString(R.string.one) -> getColor(R.color.grey)
+            resources.getString(R.string.two) -> getColor(R.color.grey_2)
+            resources.getString(R.string.three) -> getColor(R.color.grey_3)
+            else -> getColor(R.color.white)
         }
-        val color = Color.parseColor(colorText)
-        rootView.setBackgroundColor(color)
+        rootView.setBackgroundColor(colorText)
+
+        Log.d(TAG, "button click ${view.text}")
     }
 
     fun setImage(view: View) {
@@ -88,9 +92,11 @@ class MainActivity : AppCompatActivity() {
         if (imageRes == null) {
             imageRes = (IMAGES_MAP.values - currentImageRes).random()
         }
-        updateRotation(0f)
+        updateRotation(0F)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
+
+        Log.d(TAG, "button click $text ")
     }
 
     private fun updateRotation(angle: Float) {
@@ -99,26 +105,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val IMAGES_MAP = mapOf(
-            "cat" to R.drawable.cat,
-            "dog" to R.drawable.dog,
-            "parrot" to R.drawable.parrot,
-        )
+        private lateinit var appContext: Context
+        private val IMAGES_MAP by lazy {
+            mapOf(
+                appContext.getString(R.string.cat) to R.drawable.cat,
+                appContext.getString(R.string.dog) to R.drawable.dog,
+                appContext.getString(R.string.parrot) to R.drawable.parrot,
+            )
+        }
+        private const val TAG = "myApplication"
     }
 
     fun info(view: View) {
         when ((view as Button).text) {
-            "device" -> {
+            resources.getString(R.string.device) -> {
                 infoTextView.text = android.os.Build.MANUFACTURER + " " + android.os.Build.MODEL
 
             }
-            "time" -> {
+            resources.getString(R.string.time) -> {
                 infoTextView.text = SimpleDateFormat("HH:mm", Locale.US).format(Date())
             }
-            "toast" -> {
-                Toast.makeText(this, "hello", Toast.LENGTH_LONG).show()
+            resources.getString(R.string.toast) -> {
+                Toast.makeText(
+                    this, resources.getString(R.string.message_Toast),
+                    Toast.LENGTH_LONG
+                ).show()
             }
-            else -> error("unknown command")
+            else -> error(resources.getString(R.string.unknown_command))
         }
+
+        Log.d(TAG, "button click ${view.text}")
     }
 }

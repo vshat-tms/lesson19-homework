@@ -1,0 +1,34 @@
+{
+  "table": [
+    {
+      "Bottle_one": {
+        "type": "Газированная",
+        "times_app": "Вчера",
+        "name": "Святой источник",
+        "volume": "1.5л",
+        "residualVolume": "half",
+        "price": 20
+      }
+    },
+    {
+      "Bottle_two": {
+        "type": "Негазированная",
+        "times_app": "Сегодня утром",
+        "name": "Родник",
+        "volume": "неизвестно",
+        "residualVolume": "full",
+        "price": 15
+      }
+    },
+    {
+      "pack": {
+        "type": "Бумажные платочки",
+        "times_app": "Неделю назад",
+        "name": "Zewa",
+        "volume": 10,
+        "residualVolume": 7,
+        "price": 0
+      }
+    }
+  ]
+}

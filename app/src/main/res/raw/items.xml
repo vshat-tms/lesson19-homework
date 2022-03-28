@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<table>
+    <Bottle_one>
+        <type>Газированная</type>
+        <times_app>Вчера</times_app>
+        <name>Святой иточник</name>
+        <volume>1.5 л</volume>
+        <residualVolume>half</residualVolume>
+        <price>20</price>
+    </Bottle_one>
+    <Bottle_two>
+        <type>Негазированная</type>
+        <times_app>Сегодня утром</times_app>
+        <name>Родник</name>
+        <residualVolume>full</residualVolume>
+        <price>15</price>
+    </Bottle_two>
+    <pack>
+        <type>Бумажные платочки</type>
+        <times_app>Неделю назад</times_app>
+        <name>Zewa</name>
+        <volume>10</volume>
+        <residualVolume>7</residualVolume>
+        <price>0</price>
+    </pack>
+</table>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_info">28sp</dimen>
+    <dimen name="text_size_menu">20sp</dimen>
+    <dimen name="margin_left_16">16dp</dimen>
+    <dimen name="margin_left_24">24dp</dimen>
+    <dimen name="margin_left_36">36dp</dimen>
+    <dimen name="margin_top_24">24dp</dimen>
+    <dimen name="margin_Bottom_24">0dp</dimen>
+    <dimen name="button_width">50dp</dimen>
+    <dimen name="image_width">200dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+</resources>
