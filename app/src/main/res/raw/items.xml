@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<productsOnTable>
+    <waterBottle
+        isSoda="Да"
+        nameCompany="Святой источник"
+        sizeProduct="1.5 литра"
+        isOpen="Да"
+        remainder="Примерно половина"
+        whenAppeared="Вчера куплена"
+        cost="20 рублей">
+    </waterBottle>
+    <waterBottle
+        isSoda="Нет"
+        nameCompany="Родник"
+        sizeProduct="Информации нет"
+        isOpen="Нет"
+        remainder="Полная"
+        whenAppeared="Сегодня утром куплена"
+        cost="15 рублей">
+    </waterBottle>
+    <wipes
+        nameCompany="Zewa"
+        sizeProduct="10"
+        isOpen="Да"
+        remainder="7"
+        whenAppeared="Неделю назад подарен"
+        cost="Бесплатно">
+    </wipes>
+</productsOnTable>
