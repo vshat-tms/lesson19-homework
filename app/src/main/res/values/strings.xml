@@ -1,3 +1,30 @@
 <resources>
+
     <string name="app_name">lessson17</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="minus" translatable="false">-</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="rnd" translatable="false">rnd</string>
+    <string name="red_text_color_symbol" translatable="false">r</string>
+    <string name="green_text_color_symbol" translatable="false">g</string>
+    <string name="blue_text_color_symbol" translatable="false">b</string>
+    <string name="magenta_text_color_symbol" translatable="false">m</string>
+    <string name="background_color_number_1" translatable="false">1</string>
+    <string name="background_color_number_2" translatable="false">2</string>
+    <string name="background_color_number_3" translatable="false">3</string>
+    <string name="background_color_number_4" translatable="false">4</string>
+    <string name="date_format" translatable="false">HH:mm</string>
+    <string name="info">info</string>
+    <string name="counter">counter</string>
+    <string name="device">device</string>
+    <string name="time">time</string>
+    <string name="toast">toast</string>
+    <string name="color">color</string>
+    <string name="background">background</string>
+    <string name="image">image</string>
+    <string name="cat">cat</string>
+    <string name="dog">dog</string>
+    <string name="parrot">parrot</string>
+    <string name="unknown_command">unknown command</string>
+    <string name="toast_message">TOOOOOOOAST</string>
 </resources>

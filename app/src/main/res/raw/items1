@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <table>
+        <Product nubmer = "1">
+            <type>Вода бутилированная</type>
+            <brand>Святой источние</brand>
+            <izFizzy>true</izFizzy>
+            <isOpen>true</isOpen>
+            <capacityStart unit="litre">1.5</capacityStart>
+            <capacityNow unit="percents">50</capacityNow>
+            <whenExisted>Вчера</whenExisted>
+            <cost unit="rubles">20</cost>
+        </Product>
+        <Product number = "2">
+            <type>Вода бутилированная</type>
+            <brand>Родник</brand>
+            <isFizzy>false</isFizzy>
+            <isOpen>false</isOpen>
+            <whenExisted>Сегодня утром</whenExisted>
+            <cost unit="rubles">15</cost>
+        </Product>
+        <Product number = "3">
+            <type>Пачка бумажных полотенец</type>
+            <brand>Zewa</brand>
+            <isOpen>true</isOpen>
+            <capacityStart unit="count">10</capacityStart>
+            <capacityNow unit="cpunt">7</capacityNow>
+            <isGift>true</isGift>
+        </Product>
+    </table>
+</resources>
