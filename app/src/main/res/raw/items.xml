@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<items>
+    <bottloeOne>
+        <content>Газировання вода</content>
+        <name>Святой источник</name>
+        <volume>1.5</volume>
+        <quantityOfContent>Половина</quantityOfContent>
+        <price>20</price>
+        <whenBought>Вчера</whenBought>
+    </bottloeOne>
+
+    <bottleTwo>
+        <content>Негазированная вода</content>
+        <name>Родник</name>
+        <quantityOfContent>Полная (не открывалась)</quantityOfContent>
+        <price>15</price>
+        <whenBought>Сегодня утром</whenBought>
+    </bottleTwo>
+
+    <Tutu>
+        <content>Бумажные платочки</content>: "",
+        <brand>Zewa</brand>: "",
+        <methodOfPurchase>Подарок</methodOfPurchase>: "",
+        <whenPresented>Неделю назад</whenPresented> : "",
+        <volume>10</volume>: ,
+        <quantityOfConten>7</quantityOfConten>:
+    </Tutu>
+</items>

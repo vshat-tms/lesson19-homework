@@ -1,28 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lessson17</string>
-    <string name="text_nameSection_counter" translatable="false">counter</string>
-    <string name="text_name_info">info</string>
+    <string name="app_name">Урок17</string>
+    <string name="text_nameSection_counter">счетчик</string>
+    <string name="text_name_info">информация</string>
     <string name="text_btn_plus" translatable="false">+</string>
     <string name="text_btn_minus" translatable="false">-</string>
     <string name="text_btn__zero" translatable="false">0</string>
     <string name="text_btn_rndCounter" translatable="false">rnd</string>
-    <string name="text_nameSection_info">info</string>
-    <string name="text_btn_device">device</string>
-    <string name="text_btn_time">time</string>
-    <string name="text_btn_toast">toast</string>
-    <string name="text_nameSection_color">color</string>
+    <string name="text_nameSection_info">информация</string>
+    <string name="text_btn_device" translatable="false">device</string>
+    <string name="text_btn_time" translatable="false">time</string>
+    <string name="text_btn_toast" translatable="false">toast</string>
+    <string name="text_nameSection_color">цвет</string>
     <string name="text_btn_r" translatable="false">r</string>
     <string name="text_btn_g" translatable="false">g</string>
     <string name="text_btn_b" translatable="false">b</string>
     <string name="text_btn_m" translatable="false">m</string>
-    <string name="text_nameSection_background">background</string>
+    <string name="text_nameSection_background">фон</string>
     <string name="text_btn_1" translatable="false">1</string>
     <string name="text_btn_2" translatable="false">2</string>
     <string name="text_btn_3" translatable="false">3</string>
     <string name="text_btn_4" translatable="false">4</string>
-    <string name="text_nameSection_image">image</string>
+    <string name="text_nameSection_image">изображение</string>
     <string name="text_btn_cat" translatable="false">cat</string>
     <string name="text_btn_dog" translatable="false">dog</string>
     <string name="text_btn_parrot" translatable="false">parrot</string>
-    <string name="text_btn_rndImage">rnd</string>
 </resources>

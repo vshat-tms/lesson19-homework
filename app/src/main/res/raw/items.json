@@ -1,0 +1,34 @@
+{
+  "Items on the table": [
+    {
+      "Bottle one": {
+        "content": "Газированная вода",
+        "name": "Святой источник",
+        "volume": 1.5,
+        "quantity of content": "Половина",
+        "price": 20,
+        "when bought": "Вчера"
+      }
+    },
+    {
+      "Bottle two": {
+        "content": "Негазированная вода",
+        "name": "Родник",
+        "quantity of content": "Полная (не открывалась)",
+        "price": 15,
+        "when bought": "Сегодня утром"
+      }
+    },
+    {
+      "Tutu": {
+        "content": "Бумажные платочки",
+        "brand": "Zewa",
+        "method of purchase": "Подарок",
+        "when presented" : "Неделю назад",
+        "volume": 10,
+        "quantity of content": 7
+
+      }
+    }
+  ]
+}

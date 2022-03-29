@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
-            updateCounter((-100..100).random())
+            updateCounter((1..9).random())
 
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.btn_color_r).setOnClickListener {
             infoTextView.setTextColor(Color.RED)
         }
+
         findViewById<View>(R.id.btn_color_g).setOnClickListener {
             infoTextView.setTextColor(Color.GREEN)
         }
