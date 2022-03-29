@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--text sizes-->
+
+    <dimen name="text_size">40sp</dimen>
+    <dimen name="text_size_for_header">56sp</dimen>
+
+    <!--margins 16 24 36-->
+
+    <dimen name="margin_top">48dp</dimen>
+    <dimen name="margin_left_16dp">32dp</dimen>
+    <dimen name="margin_left_24dp">32dp</dimen>
+    <dimen name="margin_left_36dp">32dp</dimen>
+
+    <!--paddings-->
+
+    <dimen name="blocks_padding_top">48dp</dimen>
+    <dimen name="blocks_padding_left">48dp</dimen>
+
+    <!--height and width-->
+
+    <dimen name="button_width">100dp</dimen>
+    <dimen name="img_width">400dp</dimen>
+    <dimen name="img_height">400dp</dimen>
+</resources>

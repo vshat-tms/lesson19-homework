@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">lessson17</string>
+    <string name="app_name">lesson 19</string>
+
+    <!--Added string resources for buttons-->
+
+    <string name="minus_btn_text" translatable="false">-</string>
+    <string name="plus_btn_text" translatable="false">+</string>
+    <string name="zero_btn_text" translatable="false">0</string>
+    <string name="rnd_btn_text" translatable="false">rnd</string>
+    <string name="device_btn_text">device</string>
+    <string name="time_btn_text">time</string>
+    <string name="toast_btn_text">toast</string>
+    <string name="red_btn_text" translatable="false">r</string>
+    <string name="green_btn_text" translatable="false">g</string>
+    <string name="blue_btn_text" translatable="false">b</string>
+    <string name="magenta_btn_text" translatable="false">m</string>
+    <string name="first_bg_btn_text" translatable="false">1</string>
+    <string name="second_bg_btn_text" translatable="false">2</string>
+    <string name="third_bg_btn_text" translatable="false">3</string>
+    <string name="fourth_bg_btn_text" translatable="false">4</string>
+    <string name="cat_btn_text">cat</string>
+    <string name="dog_btn_text">dog</string>
+    <string name="parrot_btn_text">parrot</string>
+
+    <!--Added string resources for text fields-->
+
+    <string name="info_text">info</string>
+    <string name="counter_text">counter</string>
+    <string name="color_text">color</string>
+    <string name="bg_text">background</string>
+    <string name="img_text">image</string>
+
+    <string name="min_rnd_value" translatable="false">1</string>
+    <string name="max_rnd_value" translatable="false">9</string>
+
 </resources>

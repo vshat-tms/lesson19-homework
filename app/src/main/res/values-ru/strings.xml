@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Урок 19</string>
+
+    <!--Added string resources for text fields-->
+
+    <string name="info_text">информация</string>
+    <string name="counter_text">счётчик</string>
+    <string name="color_text">цвет</string>
+    <string name="bg_text">задний фон</string>
+    <string name="img_text">фото</string>
+
+    <string name="cat_btn_text">кот</string>
+    <string name="dog_btn_text">пёс</string>
+    <string name="parrot_btn_text">попугай</string>
+
+    <string name="device_btn_text">девайс</string>
+    <string name="time_btn_text">время</string>
+    <string name="toast_btn_text">сообщение</string>
+</resources>
