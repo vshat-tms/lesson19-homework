@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_value_for_random">10</integer>
+    <integer name="max_value_for_random">1000</integer>
+    <integer name="default_counter_value">0</integer>
+    <integer name="swivel_angle_start">0</integer>
+    <integer name="swivel_angle_by_click">90</integer>
+    <integer name="counter_step">1</integer>
+</resources>
