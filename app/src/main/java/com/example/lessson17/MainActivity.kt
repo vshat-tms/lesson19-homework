@@ -1,7 +1,9 @@
 package com.example.lessson17
 
+import android.content.ContentValues.TAG
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -14,7 +16,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private var counter = 0
-    private var rotation = 0f
+    private var rotation = 0F
 
     @DrawableRes
     private var currentImageRes = R.drawable.cat
@@ -34,36 +36,22 @@ class MainActivity : AppCompatActivity() {
 
 
         findViewById<View>(R.id.btn_counter_minus).setOnClickListener {
-            updateCounter(counter - 1)
+            updateCounter(counter - resources.getInteger(R.integer.counter_change))
         }
         findViewById<View>(R.id.btn_counter_plus).setOnClickListener {
-            updateCounter(counter + 1)
-
+            updateCounter(counter + resources.getInteger(R.integer.counter_change))
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
-            updateCounter((1..9).random())
-
+            updateCounter(
+                (resources.getInteger(R.integer.min_rnd_range)..
+                        resources.getInteger(R.integer.max_rnd_range)).random()
+            )
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
-            updateCounter(0)
+            updateCounter(resources.getInteger(R.integer.initial_position_image))
         }
-
-        findViewById<View>(R.id.btn_color_r).setOnClickListener {
-            infoTextView.setTextColor(Color.RED)
-        }
-
-        findViewById<View>(R.id.btn_color_g).setOnClickListener {
-            infoTextView.setTextColor(Color.GREEN)
-        }
-        findViewById<View>(R.id.btn_color_b).setOnClickListener {
-            infoTextView.setTextColor(Color.BLUE)
-        }
-        findViewById<View>(R.id.btn_color_m).setOnClickListener {
-            infoTextView.setTextColor(Color.MAGENTA)
-        }
-
         imageView.setOnClickListener {
-            updateRotation(rotation + 90)
+            updateRotation(rotation + resources.getInteger(R.integer.rotation_angel))
         }
     }
 
@@ -72,15 +60,28 @@ class MainActivity : AppCompatActivity() {
         infoTextView.text = value.toString()
     }
 
-    fun setBg(view: View) {
+    fun setColorText(view: View) {
         val colorText = when ((view as Button).text) {
-            "1" -> "#cccccc"
-            "2" -> "#dddddd"
-            "3" -> "#eeeeee"
-            else -> "#ffffff"
+            getString(R.string.text_btn_r) -> getColor(R.color.btn_color_r)
+            getString(R.string.text_btn_g) -> getColor(R.color.btn_color_g)
+            getString(R.string.text_btn_b) -> getColor(R.color.btn_color_b)
+            else -> getColor(R.color.btn_color_m)
         }
-        val color = Color.parseColor(colorText)
-        rootView.setBackgroundColor(color)
+        infoTextView.setTextColor(colorText)
+
+        Log.d(TAG, "User pressed button: ${view.text}")
+    }
+
+    fun setBg(view: View) {
+        val colorBackground = when ((view as Button).text) {
+            getString(R.string.text_btn_1) -> getColor(R.color.background_color_1)
+            getString(R.string.text_btn_2) -> getColor(R.color.background_color_2)
+            getString(R.string.text_btn_3) -> getColor(R.color.background_color_3)
+            else -> getColor(R.color.background_color_4)
+        }
+        rootView.setBackgroundColor(colorBackground)
+
+        Log.d(TAG, "User pressed button: ${view.text}")
     }
 
     fun setImage(view: View) {
@@ -92,6 +93,8 @@ class MainActivity : AppCompatActivity() {
         updateRotation(0f)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
+
+        Log.d(TAG, "User pressed button: ${view.text}")
     }
 
     private fun updateRotation(angle: Float) {
@@ -105,13 +108,13 @@ class MainActivity : AppCompatActivity() {
             "dog" to R.drawable.dog,
             "parrot" to R.drawable.parrot,
         )
+        private const val TAG = "MainActivity"
     }
 
     fun info(view: View) {
         when ((view as Button).text) {
             "device" -> {
                 infoTextView.text = android.os.Build.MANUFACTURER + " " + android.os.Build.MODEL
-
             }
             "time" -> {
                 infoTextView.text = SimpleDateFormat("HH:mm", Locale.US).format(Date())
@@ -121,5 +124,6 @@ class MainActivity : AppCompatActivity() {
             }
             else -> error("unknown command")
         }
+        Log.d(TAG, "User pressed button: ${view.text}")
     }
 }

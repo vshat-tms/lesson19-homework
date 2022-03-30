@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_rnd_range">10</integer>
+    <integer name="max_rnd_range">1000</integer>
+    <integer name="rotation_angel">90</integer>
+    <integer name="initial_position_image">0</integer>
+    <integer name="counter_change">1</integer>
+</resources>
