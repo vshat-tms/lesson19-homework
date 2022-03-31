@@ -13,8 +13,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private var counter = 0
-    private var rotation = 0f
+    private var counter = DEFAULT_COUNTER_VALUE
+    private var rotation = IMAGE_DEFAULT_ROTATION
 
     @DrawableRes
     private var currentImageRes = R.drawable.cat
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         infoTextView = findViewById(R.id.tv_info)
         imageView = findViewById(R.id.imageView)
 
-        imagesMap = mapOf(
+        imagesMap = mapOf (
             getString(R.string.cat) to R.drawable.cat,
             getString(R.string.dog) to R.drawable.dog,
             getString(R.string.parrot) to R.drawable.parrot
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         imageView.setOnClickListener {
-            updateRotation(rotation + 90)
+            updateRotation(rotation + IMAGE_ROTATION_VALUE_BY_CLICK)
         }
     }
 
