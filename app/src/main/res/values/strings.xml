@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">lessson17</string>
+    <string name="HOLA_AMIGO">HOLA AMIGO</string>
+    <string name="counter">counter</string>
+    <string name="plus_sign" translatable="false">+</string>
+    <string name="minus_sign" translatable="false">-</string>
+    <string name="zero_sign" translatable="false">0</string>
+    <string name="random">rnd</string>
+    <string name="info">info</string>
+    <string name="device">device</string>
+    <string name="time">time</string>
+    <string name="toast">toast</string>
+    <string name="toast_message">TOAST !</string>
+    <string name="color">color</string>
+    <string name="r_text_color">r</string>
+    <string name="g_text_color">g</string>
+    <string name="b_text_color">b</string>
+    <string name="m_text_color">m</string>
+    <string name="background">background</string>
+    <string name="background_color_yellow">y</string>
+    <string name="background_color_purple">p</string>
+    <string name="background_color_cyan">c</string>
+    <string name="background_color_khaki">k</string>
+    <string name="image">image</string>
+    <string name="cat">cat</string>
+    <string name="dog">dog</string>
+    <string name="parrot">parrot</string>
+    <string name="unknown_command">unknown command</string>
 </resources>

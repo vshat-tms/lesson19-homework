@@ -22,30 +22,36 @@ class MainActivity : AppCompatActivity() {
     private lateinit var infoTextView: TextView
     private lateinit var rootView: View
     private lateinit var imageView: ImageView
-
+    private lateinit var imagesMap: Map<String, Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         rootView = findViewById(R.id.root)
         infoTextView = findViewById(R.id.tv_info)
         imageView = findViewById(R.id.imageView)
 
+        imagesMap = mapOf(
+            getString(R.string.cat) to R.drawable.cat,
+            getString(R.string.dog) to R.drawable.dog,
+            getString(R.string.parrot) to R.drawable.parrot
+        )
 
         findViewById<View>(R.id.btn_counter_minus).setOnClickListener {
-            updateCounter(counter - 1)
+            updateCounter(counter - COUNTER_STEP)
         }
         findViewById<View>(R.id.btn_counter_plus).setOnClickListener {
-            updateCounter(counter + 1)
+            updateCounter(counter + COUNTER_STEP)
 
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
-            updateCounter((-100..100).random())
+            val randomRange =
+                resources.getInteger(R.integer.min_random_value)..resources.getInteger(R.integer.max_random_value)
+            updateCounter(randomRange.random())
 
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
-            updateCounter(0)
+            updateCounter(DEFAULT_COUNTER_VALUE)
         }
 
         findViewById<View>(R.id.btn_color_r).setOnClickListener {
@@ -73,22 +79,21 @@ class MainActivity : AppCompatActivity() {
 
     fun setBg(view: View) {
         val colorText = when ((view as Button).text) {
-            "1" -> "#cccccc"
-            "2" -> "#dddddd"
-            "3" -> "#eeeeee"
-            else -> "#ffffff"
+            getString(R.string.background_color_yellow) -> getColor(R.color.yellow)
+            getString(R.string.background_color_purple) -> getColor(R.color.purple)
+            getString(R.string.background_color_cyan) -> getColor(R.color.cyan)
+            else -> getColor(R.color.khaki)
         }
-        val color = Color.parseColor(colorText)
-        rootView.setBackgroundColor(color)
+        rootView.setBackgroundColor(colorText)
     }
 
     fun setImage(view: View) {
         val text = (view as Button).text
-        var imageRes = IMAGES_MAP[text]
+        var imageRes = imagesMap[text]
         if (imageRes == null) {
-            imageRes = (IMAGES_MAP.values - currentImageRes).random()
+            imageRes = (imagesMap.values - currentImageRes).random()
         }
-        updateRotation(0f)
+        updateRotation(IMAGE_DEFAULT_ROTATION)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
     }
@@ -99,26 +104,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val IMAGES_MAP = mapOf(
-            "cat" to R.drawable.cat,
-            "dog" to R.drawable.dog,
-            "parrot" to R.drawable.parrot,
-        )
+        private const val COUNTER_STEP = 1
+        private const val DEFAULT_COUNTER_VALUE = 0
+        private const val IMAGE_ROTATION_VALUE_BY_CLICK = 90f
+        private const val IMAGE_DEFAULT_ROTATION = 0f
     }
 
     fun info(view: View) {
         when ((view as Button).text) {
-            "device" -> {
+            getString(R.string.device) -> {
                 infoTextView.text = android.os.Build.MANUFACTURER + " " + android.os.Build.MODEL
 
             }
-            "time" -> {
-                infoTextView.text = SimpleDateFormat("HH:mm", Locale.US).format(Date())
+            getString(R.string.time) -> {
+                infoTextView.text =
+                    SimpleDateFormat("HH:mm", Locale.US).format(Date())
             }
-            "toast" -> {
-                Toast.makeText(this, "hello", Toast.LENGTH_LONG).show()
+            getString(R.string.toast) -> {
+                Toast.makeText(this, getString(R.string.toast_message), Toast.LENGTH_LONG).show()
             }
-            else -> error("unknown command")
+            else -> error(R.string.unknown_command)
         }
     }
 }
