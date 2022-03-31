@@ -1,0 +1,27 @@
+<resources>
+    <items>
+        <bottle_one>
+            <content>газированная вода</content>
+            <name>Святой источник</name>
+            <volume>1.5</volume>
+            <quantity_of_content>половина</quantity_of_content>
+            <price>20</price>
+            <when_bought>вчера</when_bought>
+        </bottle_one>
+        <bottle_two>
+            <content>негазированная вода</content>
+            <name>Родник</name>
+            <quantity_of_content>полная</quantity_of_content>
+            <price>15</price>
+            <when_bought>cегодня утром</when_bought>
+        </bottle_two>
+        <tutu>
+            <content>бумажные платочки</content> "",
+            <brand>Zewa</brand>
+            <method_of_purchase>подарок</method_of_purchase>
+            <when_presented>Неделю назад</when_presented>
+            <volume>10</volume>
+            <quantity_of_content>7</quantity_of_content>
+        </tutu>
+    </items>
+</resources>

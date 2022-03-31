@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
 
 
         findViewById<View>(R.id.btn_counter_minus).setOnClickListener {
-            updateCounter(counter - resources.getInteger(R.integer.counter_change))
+            updateCounter(counter - COUNTER_CHANGE)
         }
         findViewById<View>(R.id.btn_counter_plus).setOnClickListener {
-            updateCounter(counter + resources.getInteger(R.integer.counter_change))
+            updateCounter(counter + COUNTER_CHANGE)
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
             updateCounter(
@@ -48,10 +48,10 @@ class MainActivity : AppCompatActivity() {
             )
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
-            updateCounter(resources.getInteger(R.integer.initial_position_image))
+            updateCounter(INITIAL_POSITION_IMAGE)
         }
         imageView.setOnClickListener {
-            updateRotation(rotation + resources.getInteger(R.integer.rotation_angel))
+            updateRotation(rotation + ROTATION_ANGEL)
         }
     }
 
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         if (imageRes == null) {
             imageRes = (IMAGES_MAP.values - currentImageRes).random()
         }
-        updateRotation(0f)
+        updateRotation(0F)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
 
@@ -103,6 +103,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
+        private val COUNTER_CHANGE = 1
+        private val ROTATION_ANGEL = 90
+        private val INITIAL_POSITION_IMAGE = 0
         private val IMAGES_MAP = mapOf(
             "cat" to R.drawable.cat,
             "dog" to R.drawable.dog,
