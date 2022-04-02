@@ -1,6 +1,5 @@
 package com.example.lessson17
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -15,45 +14,44 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private var counter = 0
-    private var rotation = 0f
+    private var counter = START_VALUE_FOR_COUNTER
+    private var rotation = IMAGE_SWIVEL_ANGLE_START
 
     @DrawableRes
     private var currentImageRes = R.drawable.cat
-
     private lateinit var infoTextView: TextView
     private lateinit var rootView: View
     private lateinit var imageView: ImageView
+    private lateinit var imagesMap: Map<String, Int>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        appContext = applicationContext
         rootView = findViewById(R.id.root)
         infoTextView = findViewById(R.id.tv_info)
         imageView = findViewById(R.id.imageView)
 
+        imagesMap = mapOf(
+            getString(R.string.cat) to R.drawable.cat,
+            getString(R.string.dog) to R.drawable.dog,
+            getString(R.string.parrot) to R.drawable.parrot,
+        )
 
         findViewById<View>(R.id.btn_counter_minus).setOnClickListener {
-            updateCounter(counter - resources.getInteger(R.integer.counter_step))
+            updateCounter(counter - COUNTER_STEP)
         }
         findViewById<View>(R.id.btn_counter_plus).setOnClickListener {
-            updateCounter(counter + resources.getInteger(R.integer.counter_step))
-
+            updateCounter(counter + COUNTER_STEP)
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
-            updateCounter(
-                ((resources.getInteger(R.integer.min_value_for_rnd))..
-                        (resources.getInteger(R.integer.max_value_for_rnd))).random()
-            )
-
+            val rangeForRND =
+                resources.getInteger(R.integer.min_value_for_rnd)..resources.getInteger(R.integer.max_value_for_rnd)
+            updateCounter((rangeForRND).random())
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
-            updateCounter(resources.getInteger(R.integer.start_value_for_counter))
+            updateCounter(START_VALUE_FOR_COUNTER)
         }
-
         findViewById<View>(R.id.btn_color_r).setOnClickListener {
             infoTextView.setTextColor(Color.RED)
         }
@@ -69,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
         imageView.setOnClickListener {
             updateRotation(
-                rotation + resources.getInteger(R.integer.swivel_angle_by_click).toFloat()
+                rotation + IMAGE_SWIVEL_ANGLE_INCREASE_BY_CLICK
             )
         }
     }
@@ -94,11 +92,11 @@ class MainActivity : AppCompatActivity() {
 
     fun setImage(view: View) {
         val text = (view as Button).text
-        var imageRes = IMAGES_MAP[text]
+        var imageRes = imagesMap[text]
         if (imageRes == null) {
-            imageRes = (IMAGES_MAP.values - currentImageRes).random()
+            imageRes = (imagesMap.values - currentImageRes).random()
         }
-        updateRotation(resources.getInteger(R.integer.swivel_angle_start).toFloat())
+        updateRotation(IMAGE_SWIVEL_ANGLE_START)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
         Log.d(
@@ -112,21 +110,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private lateinit var appContext: Context
-        private val IMAGES_MAP by lazy {
-            mapOf(
-                appContext.getString(R.string.cat) to R.drawable.cat,
-                appContext.getString(R.string.dog) to R.drawable.dog,
-                appContext.getString(R.string.parrot) to R.drawable.parrot,
-            )
-        }
+        private const val COUNTER_STEP = 1
+        private const val START_VALUE_FOR_COUNTER = 0
+        private const val IMAGE_SWIVEL_ANGLE_INCREASE_BY_CLICK = 90f
+        private const val IMAGE_SWIVEL_ANGLE_START = 0f
     }
 
     fun info(view: View) {
         when ((view as Button).text) {
             getString(R.string.device) -> {
                 infoTextView.text = android.os.Build.MANUFACTURER + " " + android.os.Build.MODEL
-
             }
             getString(R.string.time) -> {
                 infoTextView.text =
