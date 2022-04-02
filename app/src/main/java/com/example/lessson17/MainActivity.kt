@@ -1,7 +1,5 @@
 package com.example.lessson17
 
-import android.content.Context
-import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -16,8 +14,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private var counter = 0
-    private var rotation = 0f
+    private var counter = COUNTER_ZERO
+    private var rotation = ROTATION_START_VALUE
 
     @DrawableRes
     private var currentImageRes = R.drawable.cat
@@ -25,30 +23,36 @@ class MainActivity : AppCompatActivity() {
     private lateinit var infoTextView: TextView
     private lateinit var rootView: View
     private lateinit var imageView: ImageView
+    private lateinit var imageMap: Map<String, Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        appContext = applicationContext
         rootView = findViewById(R.id.root)
         infoTextView = findViewById(R.id.tv_info)
         imageView = findViewById(R.id.imageView)
+
+        imageMap = mapOf(
+            getString(R.string.cat) to R.drawable.cat,
+            getString(R.string.dog) to R.drawable.dog,
+            getString(R.string.parrot) to R.drawable.parrot,
+        )
+
         val minNumRandom = resources.getInteger(R.integer.min_rnd)
         val maxNumRandom = resources.getInteger(R.integer.max_rnd)
-        val countStep = resources.getInteger(R.integer.counter_step)
 
         findViewById<View>(R.id.btn_counter_minus).setOnClickListener {
-            updateCounter(counter - countStep)
+            updateCounter(counter - COUNTER_STEP)
         }
         findViewById<View>(R.id.btn_counter_plus).setOnClickListener {
-            updateCounter(counter + countStep)
+            updateCounter(counter + COUNTER_STEP)
         }
         findViewById<View>(R.id.btn_counter_rnd).setOnClickListener {
             updateCounter((minNumRandom..maxNumRandom).random())
         }
         findViewById<View>(R.id.btn_counter_0).setOnClickListener {
-            updateCounter(resources.getInteger(R.integer.counter_zero))
+            updateCounter(resources.getInteger(0))
         }
 
         findViewById<View>(R.id.btn_color_r).setOnClickListener {
@@ -65,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         imageView.setOnClickListener {
-            updateRotation(rotation + 90)
+            updateRotation(rotation + ROTATION_ANGEL)
         }
     }
 
@@ -88,11 +92,11 @@ class MainActivity : AppCompatActivity() {
 
     fun setImage(view: View) {
         val text = (view as Button).text
-        var imageRes = IMAGES_MAP[text]
+        var imageRes = imageMap[text]
         if (imageRes == null) {
-            imageRes = (IMAGES_MAP.values - currentImageRes).random()
+            imageRes = (imageMap.values - currentImageRes).random()
         }
-        updateRotation(0F)
+        updateRotation(ROTATION_START_VALUE)
         currentImageRes = imageRes
         imageView.setImageResource(imageRes)
 
@@ -105,15 +109,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private lateinit var appContext: Context
-        private val IMAGES_MAP by lazy {
-            mapOf(
-                appContext.getString(R.string.cat) to R.drawable.cat,
-                appContext.getString(R.string.dog) to R.drawable.dog,
-                appContext.getString(R.string.parrot) to R.drawable.parrot,
-            )
-        }
         private const val TAG = "myApplication"
+        private const val COUNTER_STEP = 1
+        private const val COUNTER_ZERO = 0
+        private const val ROTATION_START_VALUE = 0F
+        private const val ROTATION_ANGEL = 90F
     }
 
     fun info(view: View) {

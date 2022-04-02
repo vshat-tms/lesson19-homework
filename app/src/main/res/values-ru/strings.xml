@@ -7,21 +7,9 @@
     <string name="color">Цвет текста</string>
     <string name="background">Цвет фона</string>
     <string name="image">Рисунки</string>
-    <string name="plus" translatable="false">+</string>
-    <string name="minus" translatable="false">-</string>
-    <string name="zero" translatable="false">0</string>
-    <string name="rnd" translatable="false">RND</string>
     <string name="device">устройство</string>
     <string name="time">время</string>
     <string name="toast">сообщение</string>
-    <string name="red" translatable="false">r</string>
-    <string name="green" translatable="false">g</string>
-    <string name="blue" translatable="false">b</string>
-    <string name="magenta" translatable="false">m</string>
-    <string name="one" translatable="false">1</string>
-    <string name="two" translatable="false">2</string>
-    <string name="three" translatable="false">3</string>
-    <string name="four" translatable="false">4</string>
     <string name="cat">кошка</string>
     <string name="dog">собака</string>
     <string name="parrot">попугай</string>
