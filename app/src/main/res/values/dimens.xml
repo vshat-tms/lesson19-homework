@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="pixels_16">16dp</dimen>
-    <dimen name="pixels_24">24dp</dimen>
-    <dimen name="pixels_36">36dp</dimen>
-    <dimen name="pixels_50">50dp</dimen>
-    <dimen name="pixels_200">200dp</dimen>
-    <dimen name="text_20">20sp</dimen>
-    <dimen name="text_28">28sp</dimen>
+    <dimen name="pixels_1">16dp</dimen>
+    <dimen name="pixels_2">24dp</dimen>
+    <dimen name="pixels_3">36dp</dimen>
+    <dimen name="pixels_4">50dp</dimen>
+    <dimen name="pixels_5">200dp</dimen>
+
+    <dimen name="text_small">20sp</dimen>
+    <dimen name="text_medium">28sp</dimen>
 </resources>

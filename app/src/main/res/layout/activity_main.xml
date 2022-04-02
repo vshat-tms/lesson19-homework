@@ -12,17 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/pixels_24"
+        android:layout_marginTop="@dimen/pixels_2"
         android:gravity="center"
         android:text="@string/info"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_28" />
+        android:textSize="@dimen/text_medium" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/pixels_24"
-        android:paddingTop="@dimen/pixels_24">
+        android:paddingLeft="@dimen/pixels_2"
+        android:paddingTop="@dimen/pixels_2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,41 +31,41 @@
             android:gravity="center"
             android:text="@string/counter"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_20" />
+            android:textSize="@dimen/text_small" />
 
         <Button
             android:id="@+id/btn_counter_plus"
-            android:layout_width="@dimen/pixels_50"
+            android:layout_width="@dimen/pixels_4"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/pixels_16"
+            android:layout_marginLeft="@dimen/pixels_1"
             android:text="@string/button_plus"
-            android:textSize="@dimen/text_20" />
+            android:textSize="@dimen/text_small" />
 
         <Button
             android:id="@+id/btn_counter_minus"
 
-            android:layout_width="@dimen/pixels_50"
+            android:layout_width="@dimen/pixels_4"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/pixels_16"
+            android:layout_marginLeft="@dimen/pixels_1"
             android:text="@string/button_minus"
-            android:textSize="@dimen/text_20" />
+            android:textSize="@dimen/text_small" />
 
         <Button
             android:id="@+id/btn_counter_0"
 
-            android:layout_width="@dimen/pixels_50"
+            android:layout_width="@dimen/pixels_4"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/pixels_16"
+            android:layout_marginLeft="@dimen/pixels_1"
             android:text="@string/button_zero"
-            android:textSize="@dimen/text_20" />
+            android:textSize="@dimen/text_small" />
 
         <Button
             android:id="@+id/btn_counter_rnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/pixels_16"
+            android:layout_marginLeft="@dimen/pixels_1"
             android:text="@string/button_random_int"
-            android:textSize="@dimen/text_20" />
+            android:textSize="@dimen/text_small" />
     </LinearLayout>
 
     <HorizontalScrollView
@@ -75,8 +75,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/pixels_24"
-            android:paddingTop="@dimen/pixels_24">
+            android:paddingLeft="@dimen/pixels_2"
+            android:paddingTop="@dimen/pixels_2">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -85,31 +85,31 @@
                 android:gravity="center"
                 android:text="@string/info"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_16"
+                android:layout_marginLeft="@dimen/pixels_1"
                 android:onClick="info"
                 android:text="@string/button_device"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_16"
+                android:layout_marginLeft="@dimen/pixels_1"
                 android:onClick="info"
                 android:text="@string/button_time"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_16"
+                android:layout_marginLeft="@dimen/pixels_1"
                 android:onClick="info"
                 android:text="@string/button_toast"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -122,8 +122,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/pixels_24"
-            android:paddingTop="@dimen/pixels_24">
+            android:paddingLeft="@dimen/pixels_2"
+            android:paddingTop="@dimen/pixels_2">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -132,41 +132,45 @@
                 android:gravity="center"
                 android:text="@string/color"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:id="@+id/btn_color_r"
 
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_36"
+                android:layout_marginLeft="@dimen/pixels_3"
+                android:onClick="setColorText"
                 android:text="@string/button_r"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:id="@+id/btn_color_g"
 
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
+                android:onClick="setColorText"
                 android:text="@string/button_g"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:id="@+id/btn_color_b"
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
+                android:onClick="setColorText"
                 android:text="@string/button_b"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:id="@+id/btn_color_m"
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
+                android:onClick="setColorText"
                 android:text="@string/button_m"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -178,8 +182,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/pixels_24"
-            android:paddingTop="@dimen/pixels_24">
+            android:paddingLeft="@dimen/pixels_2"
+            android:paddingTop="@dimen/pixels_2">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -188,39 +192,39 @@
                 android:gravity="center"
                 android:text="@string/background"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_36"
+                android:layout_marginLeft="@dimen/pixels_3"
                 android:onClick="setBg"
                 android:text="@string/button_1"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
                 android:onClick="setBg"
                 android:text="@string/button_2"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
                 android:onClick="setBg"
                 android:text="@string/button_3"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
-                android:layout_width="@dimen/pixels_50"
+                android:layout_width="@dimen/pixels_4"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
                 android:onClick="setBg"
                 android:text="@string/button_4"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -232,8 +236,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/pixels_24"
-            android:paddingTop="@dimen/pixels_24">
+            android:paddingLeft="@dimen/pixels_2"
+            android:paddingTop="@dimen/pixels_2">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -242,48 +246,48 @@
                 android:gravity="center"
                 android:text="@string/image"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_36"
+                android:layout_marginLeft="@dimen/pixels_3"
                 android:onClick="setImage"
                 android:text="@string/button_cat"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
 
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
                 android:onClick="setImage"
                 android:text="@string/button_dog"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
                 android:onClick="setImage"
                 android:text="@string/button_parrot"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/pixels_24"
+                android:layout_marginLeft="@dimen/pixels_2"
                 android:onClick="setImage"
                 android:text="@string/button_random_zoo"
-                android:textSize="@dimen/text_20" />
+                android:textSize="@dimen/text_small" />
         </LinearLayout>
     </HorizontalScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/pixels_200"
-        android:layout_height="@dimen/pixels_200"
+        android:layout_width="@dimen/pixels_5"
+        android:layout_height="@dimen/pixels_5"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/pixels_24"
+        android:layout_marginTop="@dimen/pixels_2"
         android:src="@drawable/cat" />
 </LinearLayout>
