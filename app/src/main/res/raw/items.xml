@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items-on-table>
+    <item name = " газированная вода 'Святой источник' ">
+        <cost>20 рублей</cost>
+        <volume>1.5 литра</volume>
+        <residual>половина</residual>
+        <time>вчера</time>
+    </item>
+    <item name = " негазированная вода 'Родник' ">
+        <cost>15 рублей</cost>
+        <volume>полная</volume>
+        <residual>полная</residual>
+        <time>сегодня</time>
+    </item>
+    <item name = " бумажные платочки 'Zewa' ">
+        <cost>бесплатно</cost>
+        <volume>10</volume>
+        <residual>7</residual>
+        <time>неделю назад</time>
+    </item>
+</items-on-table>

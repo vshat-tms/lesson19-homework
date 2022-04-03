@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/linearLayout_paddingLeft"
+                android:paddingTop="@dimen/linearLayout_paddingTop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/counter_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textView_textSize" />
+
+                <Button
+                    android:id="@+id/btn_counter_plus"
+                    style="@style/Button"
+                    android:text="@string/plus_btn" />
+
+                <Button
+                    android:id="@+id/btn_counter_minus"
+                    style="@style/Button"
+                    android:text="@string/minus_btn" />
+
+                <Button
+                    android:id="@+id/btn_counter_0"
+                    style="@style/Button"
+                    android:text="@string/zero_btn" />
+
+                <Button
+                    android:id="@+id/btn_counter_rnd"
+                    style="@style/Button"
+                    android:layout_width="wrap_content"
+                    android:text="@string/rnd_btn" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/linearLayout_paddingLeft"
+                    android:paddingTop="@dimen/linearLayout_paddingTop">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/info_text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textView_textSize" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:text="@string/device_btn" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:onClick="info"
+                        android:text="@string/time_btn" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:onClick="info"
+                        android:text="@string/toast_btn" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/linearLayout_paddingLeft"
+                android:paddingTop="@dimen/linearLayout_paddingTop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/color_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textView_textSize" />
+
+                <Button
+                    android:id="@+id/btn_color_r"
+                    style="@style/Button"
+                    android:layout_marginStart="@dimen/first_buttons_marginLeft"
+                    android:text="@string/red_text_btn" />
+
+                <Button
+                    android:id="@+id/btn_color_g"
+                    style="@style/Button"
+                    android:text="@string/green_text_btn" />
+
+                <Button
+                    android:id="@+id/btn_color_b"
+                    style="@style/Button"
+                    android:text="@string/blue_text_btn" />
+
+                <Button
+                    android:id="@+id/btn_color_m"
+                    style="@style/Button"
+                    android:text="@string/magenta_text_btn" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/linearLayout_paddingLeft"
+                android:paddingTop="@dimen/linearLayout_paddingTop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/background_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textView_textSize" />
+
+                <Button
+                    style="@style/Button"
+                    android:layout_marginLeft="@dimen/first_buttons_marginLeft"
+                    android:onClick="setBg"
+                    android:text="@string/first_background_btn" />
+
+                <Button
+                    style="@style/Button"
+                    android:onClick="setBg"
+                    android:text="@string/second_background_btn" />
+
+                <Button
+                    style="@style/Button"
+                    android:onClick="setBg"
+                    android:text="@string/third_background_btn" />
+
+                <Button
+                    style="@style/Button"
+                    android:onClick="setBg"
+                    android:text="@string/fourth_background_btn" />
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/linearLayout_paddingLeft"
+                    android:paddingTop="@dimen/linearLayout_paddingTop">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/image_text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textView_textSize" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/first_buttons_marginLeft"
+                        android:onClick="setImage"
+                        android:text="@string/cat_image_btn" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:onClick="setImage"
+                        android:text="@string/dog_image_btn" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:onClick="setImage"
+                        android:text="@string/parrot_image_btn" />
+
+                    <Button
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:onClick="setImage"
+                        android:text="@string/rnd_btn" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/image_layout_width"
+                android:layout_height="@dimen/image_layout_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/textView_marginTop"
+                android:src="@drawable/cat" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/textView_marginTop"
+                android:gravity="center"
+                android:text="@string/info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_info" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

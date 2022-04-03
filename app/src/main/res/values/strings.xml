@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">lessson17</string>
+    <string name="app_name">lessson19</string>
+    <string name="info">info</string>
+    <!--Button-->
+    <string name="plus_btn" translatable="false">+</string>
+    <string name="minus_btn" translatable="false">-</string>
+    <string name="zero_btn" translatable="false">0</string>
+    <string name="rnd_btn" translatable="false">RND</string>
+    <string name="device_btn">device</string>
+    <string name="time_btn">time</string>
+    <string name="toast_btn">toast</string>
+    <string name="toast_messagen">hello</string>
+    <string name="red_text_btn" translatable="false">r</string>
+    <string name="green_text_btn" translatable="false">g</string>
+    <string name="blue_text_btn" translatable="false">b</string>
+    <string name="magenta_text_btn" translatable="false">m</string>
+    <string name="first_background_btn" translatable="false">1</string>
+    <string name="second_background_btn" translatable="false">2</string>
+    <string name="third_background_btn" translatable="false">3</string>
+    <string name="fourth_background_btn" translatable="false">4</string>
+    <string name="cat_image_btn">cat</string>
+    <string name="dog_image_btn">dog</string>
+    <string name="parrot_image_btn">parrot</string>
+    <string name="unknown_command">unknown command</string>
+    <!--Text -->
+    <string name="counter_text">counter</string>
+    <string name="info_text">info</string>
+    <string name="color_text">color</string>
+    <string name="background_text">background</string>
+    <string name="image_text">image</string>
+
+
 </resources>

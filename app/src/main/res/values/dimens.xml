@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize_info">28sp</dimen>
+    <dimen name="textView_marginTop">24sp</dimen>
+    <dimen name="linearLayout_paddingLeft">24sp</dimen>
+    <dimen name="linearLayout_paddingTop">24sp</dimen>
+    <dimen name="textView_textSize">20sp</dimen>
+    <dimen name="button_one_symbol_width">50sp</dimen>
+    <dimen name="button_marginLeft">16sp</dimen>
+    <dimen name="buttons_marginLeft">24sp</dimen>
+    <dimen name="first_buttons_marginLeft">36sp</dimen>
+    <dimen name="image_layout_width">200sp</dimen>
+    <dimen name="image_layout_height">200sp</dimen>
+</resources>
