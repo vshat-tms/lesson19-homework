@@ -12,60 +12,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/textView_marginTop"
         android:gravity="center"
-        android:text="info"
-        android:textColor="#000000"
-        android:textSize="28sp" />
+        android:text="@string/info"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_info" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp">
+        android:paddingLeft="@dimen/linearLayout_paddingLeft"
+        android:paddingTop="@dimen/linearLayout_paddingTop">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="counter"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            android:text="@string/counter_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textView_textSize" />
 
         <Button
             android:id="@+id/btn_counter_plus"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="+"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:text="@string/plus_btn" />
 
         <Button
             android:id="@+id/btn_counter_minus"
-
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="-"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:text="@string/minus_btn" />
 
         <Button
             android:id="@+id/btn_counter_0"
-
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="0"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:text="@string/zero_btn" />
 
         <Button
             android:id="@+id/btn_counter_rnd"
+            style="@style/Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="rnd"
-            android:textSize="20sp" />
+            android:text="@string/rnd_btn" />
     </LinearLayout>
 
     <HorizontalScrollView
@@ -75,41 +62,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:paddingTop="24dp">
+            android:paddingLeft="@dimen/linearLayout_paddingLeft"
+            android:paddingTop="@dimen/linearLayout_paddingTop">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="info"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:text="@string/info_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_textSize" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                style="@style/Button"
                 android:onClick="info"
-                android:text="device"
-                android:textSize="20sp" />
+                android:layout_width="wrap_content"
+                android:text="@string/device_btn" />
 
             <Button
+                style="@style/Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:onClick="info"
-                android:text="time"
-                android:textSize="20sp" />
+                android:text="@string/time_btn" />
 
             <Button
+                style="@style/Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:onClick="info"
-                android:text="toast"
-                android:textSize="20sp" />
+                android:text="@string/toast_btn" />
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -117,99 +98,75 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp">
+        android:paddingLeft="@dimen/linearLayout_paddingLeft"
+        android:paddingTop="@dimen/linearLayout_paddingTop">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="color"
-            android:textColor="#000000"
-            android:textSize="20dp" />
+            android:text="@string/color_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textView_textSize" />
 
         <Button
             android:id="@+id/btn_color_r"
-
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:text="r"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:layout_marginStart="@dimen/first_buttons_marginLeft"
+            android:text="@string/red_text_btn" />
 
         <Button
             android:id="@+id/btn_color_g"
-
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:text="g"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:text="@string/green_text_btn" />
 
         <Button
             android:id="@+id/btn_color_b"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:text="b"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:text="@string/blue_text_btn" />
 
         <Button
             android:id="@+id/btn_color_m"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:text="m"
-            android:textSize="20sp" />
+            style="@style/Button"
+            android:text="@string/magenta_text_btn" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp">
+        android:paddingLeft="@dimen/linearLayout_paddingLeft"
+        android:paddingTop="@dimen/linearLayout_paddingTop">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="background"
-            android:textColor="#000000"
-            android:textSize="20dp" />
+            android:text="@string/background_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textView_textSize" />
 
         <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
+            style="@style/Button"
+            android:layout_marginLeft="@dimen/first_buttons_marginLeft"
             android:onClick="setBg"
-            android:text="1"
-            android:textSize="20sp" />
+            android:text="@string/first_background_btn" />
 
         <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            style="@style/Button"
             android:onClick="setBg"
-            android:text="2"
-            android:textSize="20sp" />
+            android:text="@string/second_background_btn" />
 
         <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            style="@style/Button"
             android:onClick="setBg"
-            android:text="3"
-            android:textSize="20sp" />
+            android:text="@string/third_background_btn" />
 
         <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            style="@style/Button"
             android:onClick="setBg"
-            android:text="4"
-            android:textSize="20sp" />
+            android:text="@string/fourth_background_btn" />
     </LinearLayout>
 
 
@@ -218,60 +175,53 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:paddingTop="24dp">
+            android:paddingLeft="@dimen/linearLayout_paddingLeft"
+            android:paddingTop="@dimen/linearLayout_paddingTop">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="image"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:text="@string/image_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_textSize" />
 
             <Button
+                style="@style/Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
+                android:layout_marginLeft="@dimen/first_buttons_marginLeft"
                 android:onClick="setImage"
-                android:text="cat"
-                android:textSize="20sp" />
+                android:text="@string/cat_image_btn" />
 
             <Button
+                style="@style/Button"
                 android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
                 android:onClick="setImage"
-                android:text="dog"
-                android:textSize="20sp" />
+                android:text="@string/dog_image_btn" />
 
             <Button
+                style="@style/Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
                 android:onClick="setImage"
-                android:text="parrot"
-                android:textSize="20sp" />
+                android:text="@string/parrot_image_btn" />
 
             <Button
+                style="@style/Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
                 android:onClick="setImage"
-                android:text="rnd"
-                android:textSize="20sp" />
+                android:text="@string/rnd_btn" />
+
         </LinearLayout>
     </HorizontalScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/image_layout_width"
+        android:layout_height="@dimen/image_layout_height"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/textView_marginTop"
         android:src="@drawable/cat" />
 </LinearLayout>

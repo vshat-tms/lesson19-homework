@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Урок 19</string>
+    <string name="plus_btn">+</string>
+    <string name="minus_btn">-</string>
+    <string name="zero_btn">0</string>
+    <string name="rnd_btn">RND</string>
+    <string name="device_btn">устроиство</string>
+    <string name="time_btn">время</string>
+    <string name="toast_btn">уведомленние</string>
+    <string name="red_text_btn">r</string>
+    <string name="green_text_btn">g</string>
+    <string name="blue_text_btn">b</string>
+    <string name="magenta_text_btn">m</string>
+    <string name="first_background_btn">1</string>
+    <string name="second_background_btn">2</string>
+    <string name="third_background_btn">3</string>
+    <string name="fourth_background_btn">4</string>
+    <string name="cat_image_btn">кот</string>
+    <string name="dog_image_btn">собака</string>
+    <string name="parrot_image_btn">попугай</string>
+    <string name="counter_text">счетчик</string>
+    <string name="info_text">инфо</string>
+    <string name="color_text">цвет</string>
+    <string name="background_text">фон</string>
+    <string name="image_text">изображение</string>
+    <string name="info">инфо</string>
+    <string name="toast_messagen">Привет</string>
+    <string name="unknown_command">неизвестная команда</string>
+</resources>
