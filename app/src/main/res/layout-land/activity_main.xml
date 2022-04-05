@@ -159,6 +159,54 @@
                     android:textSize="@dimen/button_text_size" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/linearLayout_padding_left"
+                android:paddingTop="@dimen/linearLayout_padding_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/background"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textView_text_size" />
+
+                <Button
+                    android:layout_width="@dimen/button_with_one_symbol_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin_left"
+                    android:onClick="setBg"
+                    android:text="@string/background_color_yellow"
+                    android:textSize="@dimen/button_text_size" />
+
+                <Button
+                    android:layout_width="@dimen/button_with_one_symbol_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin_left"
+                    android:onClick="setBg"
+                    android:text="@string/background_color_purple"
+                    android:textSize="@dimen/button_text_size" />
+
+                <Button
+                    android:layout_width="@dimen/button_with_one_symbol_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin_left"
+                    android:onClick="setBg"
+                    android:text="@string/background_color_cyan"
+                    android:textSize="@dimen/button_text_size" />
+
+                <Button
+                    android:layout_width="@dimen/button_with_one_symbol_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin_left"
+                    android:onClick="setBg"
+                    android:text="@string/background_color_khaki"
+                    android:textSize="@dimen/button_text_size" />
+            </LinearLayout>
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -219,54 +267,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/imageView_margin_top"
                 android:src="@drawable/cat" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/linearLayout_padding_left"
-                android:paddingTop="@dimen/linearLayout_padding_top">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="@string/background"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/textView_text_size" />
-
-                <Button
-                    android:layout_width="@dimen/button_with_one_symbol_text_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:onClick="setBg"
-                    android:text="@string/background_color_yellow"
-                    android:textSize="@dimen/button_text_size" />
-
-                <Button
-                    android:layout_width="@dimen/button_with_one_symbol_text_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:onClick="setBg"
-                    android:text="@string/background_color_purple"
-                    android:textSize="@dimen/button_text_size" />
-
-                <Button
-                    android:layout_width="@dimen/button_with_one_symbol_text_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:onClick="setBg"
-                    android:text="@string/background_color_cyan"
-                    android:textSize="@dimen/button_text_size" />
-
-                <Button
-                    android:layout_width="@dimen/button_with_one_symbol_text_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:onClick="setBg"
-                    android:text="@string/background_color_khaki"
-                    android:textSize="@dimen/button_text_size" />
-            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_info"
