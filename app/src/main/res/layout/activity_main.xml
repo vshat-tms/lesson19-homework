@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,60 +13,58 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/textView_marginTop"
         android:gravity="center"
-        android:text="info"
-        android:textColor="#000000"
-        android:textSize="28sp" />
+        android:text="@string/HOLA_AMIGO"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_text_size" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp">
+        android:paddingLeft="@dimen/linearLayout_padding_left"
+        android:paddingTop="@dimen/linearLayout_padding_top">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="counter"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            android:text="@string/counter"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textView_text_size" />
 
         <Button
             android:id="@+id/btn_counter_plus"
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="+"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/counter_layout_button_margin_left"
+            android:text="@string/plus_sign"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:id="@+id/btn_counter_minus"
-
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="-"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/counter_layout_button_margin_left"
+            android:text="@string/minus_sign"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:id="@+id/btn_counter_0"
-
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="0"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/counter_layout_button_margin_left"
+            android:text="@string/zero_sign"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:id="@+id/btn_counter_rnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="rnd"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/counter_layout_button_margin_left"
+            android:text="@string/random"
+            android:textSize="@dimen/button_text_size" />
     </LinearLayout>
 
     <HorizontalScrollView
@@ -75,41 +74,41 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:paddingTop="24dp">
+            android:paddingLeft="@dimen/linearLayout_padding_left"
+            android:paddingTop="@dimen/linearLayout_padding_top">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="info"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:text="@string/info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_text_size" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/button_margin_left"
                 android:onClick="info"
-                android:text="device"
-                android:textSize="20sp" />
+                android:text="@string/device"
+                android:textSize="@dimen/button_text_size" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/button_text_size"
                 android:onClick="info"
-                android:text="time"
-                android:textSize="20sp" />
+                android:text="@string/time"
+                android:textSize="@dimen/button_text_size" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/button_margin_left"
                 android:onClick="info"
-                android:text="toast"
-                android:textSize="20sp" />
+                android:text="@string/toast"
+                android:textSize="@dimen/button_text_size" />
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -117,99 +116,97 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp">
+        android:paddingLeft="@dimen/linearLayout_padding_left"
+        android:paddingTop="@dimen/linearLayout_padding_top">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="color"
-            android:textColor="#000000"
-            android:textSize="20dp" />
+            android:text="@string/color"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textView_text_size" />
 
         <Button
             android:id="@+id/btn_color_r"
-
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:text="r"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/r_text_color"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:id="@+id/btn_color_g"
-
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:text="g"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/g_text_color"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:id="@+id/btn_color_b"
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:text="b"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/b_text_color"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:id="@+id/btn_color_m"
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:text="m"
-            android:textSize="20sp" />
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/m_text_color"
+            android:textSize="@dimen/button_text_size" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp">
+        android:paddingLeft="@dimen/linearLayout_padding_left"
+        android:paddingTop="@dimen/linearLayout_padding_top">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="background"
-            android:textColor="#000000"
-            android:textSize="20dp" />
+            android:text="@string/background"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textView_text_size" />
 
         <Button
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
+            android:layout_marginLeft="@dimen/button_margin_left"
             android:onClick="setBg"
-            android:text="1"
-            android:textSize="20sp" />
+            android:text="@string/background_color_yellow"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            android:layout_marginLeft="@dimen/button_margin_left"
             android:onClick="setBg"
-            android:text="2"
-            android:textSize="20sp" />
+            android:text="@string/background_color_purple"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            android:layout_marginLeft="@dimen/button_margin_left"
             android:onClick="setBg"
-            android:text="3"
-            android:textSize="20sp" />
+            android:text="@string/background_color_cyan"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
-            android:layout_width="50dp"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            android:layout_marginLeft="@dimen/button_margin_left"
             android:onClick="setBg"
-            android:text="4"
-            android:textSize="20sp" />
+            android:text="@string/background_color_khaki"
+            android:textSize="@dimen/button_text_size" />
     </LinearLayout>
 
 
@@ -218,60 +215,59 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/button_with_one_symbol_text_width"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:paddingTop="24dp">
+            android:paddingLeft="@dimen/linearLayout_padding_left"
+            android:paddingTop="@dimen/linearLayout_padding_top">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="image"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:text="@string/image"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_text_size" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
+                android:layout_marginLeft="@dimen/button_margin_left"
                 android:onClick="setImage"
-                android:text="cat"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:onClick="setImage"
-                android:text="dog"
-                android:textSize="20sp" />
+                android:text="@string/cat"
+                android:textSize="@dimen/button_text_size" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
+                android:layout_marginLeft="@dimen/button_margin_left"
                 android:onClick="setImage"
-                android:text="parrot"
-                android:textSize="20sp" />
+                android:text="@string/dog"
+                android:textSize="@dimen/button_text_size" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
+                android:layout_marginLeft="@dimen/button_margin_left"
                 android:onClick="setImage"
-                android:text="rnd"
-                android:textSize="20sp" />
+                android:text="@string/parrot"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:onClick="setImage"
+                android:text="@string/random"
+                android:textSize="@dimen/button_text_size" />
         </LinearLayout>
     </HorizontalScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/imageView_width"
+        android:layout_height="@dimen/imageView_height"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/imageView_margin_top"
         android:src="@drawable/cat" />
 </LinearLayout>

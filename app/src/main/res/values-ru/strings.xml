@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Урок 17</string>
+    <string name="HOLA_AMIGO">ЗДРАВСТВУЙ</string>
+    <string name="counter">счётчик</string>
+    <string name="random">случ</string>
+    <string name="info">инфо</string>
+    <string name="device">устройство</string>
+    <string name="time">время</string>
+    <string name="toast">тост</string>
+    <string name="toast_message">ТОООООСТ !</string>
+    <string name="color">цвет</string>
+    <string name="r_text_color">к</string>
+    <string name="g_text_color">з</string>
+    <string name="b_text_color">с</string>
+    <string name="m_text_color">р</string>
+    <string name="background">фон</string>
+    <string name="background_color_yellow">ж</string>
+    <string name="background_color_purple">ф</string>
+    <string name="background_color_cyan">л</string>
+    <string name="background_color_khaki">х</string>
+    <string name="image">картинка</string>
+    <string name="cat">кот</string>
+    <string name="dog">собака</string>
+    <string name="parrot">попугай</string>
+    <string name="unknown_command">неизвестная команда</string>
+</resources>

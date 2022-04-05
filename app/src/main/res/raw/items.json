@@ -1,0 +1,38 @@
+{
+  "table": {
+    "productList": [
+      {
+        "Product 1": {
+          "type": "Вода бутилированная",
+          "brand": "Святой источник",
+          "isFizzy": true,
+          "isOpen": true,
+          "capacityStart: liter": 1.5,
+          "capacityNow: percents": 50,
+          "whenExisted": "Вчера",
+          "cost: rubles": 20
+        }
+      },
+      {
+        "Product 2": {
+          "type": "Вода бутилированная",
+          "brand": "Родник",
+          "isFizzy": false,
+          "isOpen": false,
+          "whenExisted": "Сегодня утром",
+          "cost: rubles": 15
+        }
+      },
+      {
+        "Product_3": {
+          "type": "Пачка бумажных полотенец",
+          "brand": "Zewa",
+          "isOpen": true,
+          "capacityStart: count": 10,
+          "capacityNow: count": 7,
+          "isGift": true
+        }
+      }
+    ]
+  }
+}
